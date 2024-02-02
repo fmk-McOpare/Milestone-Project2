@@ -43,4 +43,21 @@ The quiz app retrieves questions from the [Open Trivia Database API](https://ope
 ![Quiz Image](quiz-screenshot-1.png)
 
 
+# Code Validation
+
+## Index (Home) HTML
+
+![W3 Validation Screenshot for Index](w3_validator_for_index.png)
+
+## About HTML
+
+![W3 Validation Screenshot for About](w3_validator_for_about.png)
+
+## Instructions HTML
+
+![W3 Validation Screenshot for Instructions](w3_validator_for_instructions.png)
+
+## CSS Style
+
+![W3 Validation Screenshot for Style](w3_validator_for_style.png)
 
