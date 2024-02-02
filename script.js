@@ -13,17 +13,30 @@ function fetchQuestions() {
         .then(response => response.json())
         .then(data => {
             questions = data.results.map(result => {
-                const question = {
+                // Retrieve all answers
+                const answers = [
+                    ...result.incorrect_answers.map(text => ({ text, correct: false })),
+                    { text: result.correct_answer, correct: true }
+                ];
+
+                // Shuffle the answers array
+                shuffleArray(answers);
+
+                // Return the shuffled question object
+                return {
                     question: result.question,
-                    answers: [
-                        ...result.incorrect_answers.map(text => ({ text, correct: false })),
-                        { text: result.correct_answer, correct: true }
-                    ]
+                    answers: answers
                 };
-                return question;
             });
             showPopup();
         });
+}
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
 }
 
 function showPopup() {
