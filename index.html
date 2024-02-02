@@ -8,9 +8,23 @@
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="instructions.html">Instructions</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="app">
         <h1>Milstone-Project2</h1>
         <div class="quiz">
+            <div id="popup" class="popup">
+                <h2>Welcome to Thinkathon Quiz!</h2>
+                <p>Instructions: Answer the following questions by selecting the correct option. Click "Start Quiz" to begin.</p>
+                <button id="start-quiz-btn">Start Quiz</button>
+            </div>
             <h2 id="question">Question goes here</h2>
             <div id="answer-buttons">
                 <button class="btn">Answer 1</button>
